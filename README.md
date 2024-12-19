@@ -95,4 +95,3 @@ php artisan migrate
 ```
 
 This Laravel E-commerce Project is designed for a seamless and efficient online shopping experience for both users and administrators.
->>>>>>> 3014109 (Initial commit)
