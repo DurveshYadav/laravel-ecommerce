@@ -1,5 +1,6 @@
 <?php
 
+
 use App\Http\Controllers\Admin\adminLoginController;
 use App\Http\Controllers\admin\BrandController;
 use App\Http\Controllers\admin\CategoryController;
@@ -45,6 +46,7 @@ Route::get('/',[FrontController::class,'index'])->name('front.home');
 Route::get('/shop/{categorySlug?}/{subCategorySlug?}',[ShopController::class,'index'])->name('front.shop');
 Route::get('/product/{slug}',[ShopController::class,'product'])->name('front.product');
 // Add to Cart Routes
+// Route::get('/cart', [CartController::class, 'cart'])->name('cart.index');
 Route::get('/cart',[CartController::class,'cart'])->name('front.cart');
 Route::post('/add-to-cart',[CartController::class,'addToCart'])->name('front.addToCart');
 Route::post('/update-cart',[CartController::class,'updateCart'])->name('front.updateCart');

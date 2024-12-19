@@ -2,6 +2,7 @@
 
 @section('content')
 
+
 <section class="section-1">
     <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="false">
         <div class="carousel-inner">
@@ -155,12 +156,15 @@
                             @endif
 
 
-                        <a onclick="addToWishList({{ $product->id }})" class="whishlist" href="javascript:void(0);"><i class="far fa-heart"></i></a>
+                        <!-- <a onclick="addToWishList({{ $product->id }})" class="whishlist" href="javascript:void(0);"><i class="far fa-heart"></i></a> -->
+                        <a onclick="addToWishList('{{ $product->id }}')" class="whishlist" href="javascript:void(0);">
+  <i class="far fa-heart"></i>
+</a>
 
                         <div class="product-action">
                         @if($product->track_qty == 'Yes')
                             @if ($product->qty > 0)
-                                <a class="btn btn-dark" href="javascript:void(0)" onclick="addToCart({{ $product->id }})">
+                                <a class="btn btn-dark" href="javascript:void(0)" onclick="addToCart('{{ $product->id }}')">
                                     <i class="fa fa-shopping-cart"></i> Add To Cart
                                 </a>
                             @else
@@ -169,7 +173,7 @@
                                 </a>
                             @endif
                         @else
-                            <a class="btn btn-dark" href="javascript:void(0)" onclick="addToCart({{ $product->id }})">
+                            <a class="btn btn-dark" href="javascript:void(0)" onclick="addToCart('{{ $product->id }}')">
                                 <i class="fa fa-shopping-cart"></i> Add To Cart
                             </a>
                         @endif
@@ -218,13 +222,13 @@
                             @else
                             <img src="{{ asset('admin-assets/img/default-150x150.png') }}" class="card-img-top">
                             @endif
-                            <a onclick="addToWishList({{ $product->id }})" class="whishlist" href="javascript:void(0)"><i class="far fa-heart"></i></a>
+                            <a onclick="addToWishList('{{ $product->id }}')" class="whishlist" href="javascript:void(0)"><i class="far fa-heart"></i></a>
 
                             {{-- Show Wishlist icon --}}
                             {{-- @if ($wishlistProducts->where('product_id', $product->id)->isNotEmpty())
-                            <a onclick="addToWishList({{ $product->id }})" class="whishlist" href="javascript:void(0)"><i class="fas fa-heart text-danger"></i></a>
+                            <a onclick="addToWishList('{{ $product->id }}')" class="whishlist" href="javascript:void(0)"><i class="fas fa-heart text-danger"></i></a>
                             @else
-                                <a onclick="addToWishList({{ $product->id }})" class="whishlist" href="javascript:void(0)"><i class="far fa-heart"></i></a>
+                                <a onclick="addToWishList('{{ $product->id }}')" class="whishlist" href="javascript:void(0)"><i class="far fa-heart"></i></a>
                             @endif --}}
 
 
@@ -232,7 +236,7 @@
                         <div class="product-action">
                             @if($product->track_qty == 'Yes')
                                 @if ($product->qty > 0)
-                                    <a class="btn btn-dark" href="javascript:void(0)" onclick="addToCart({{ $product->id }})">
+                                    <a class="btn btn-dark" href="javascript:void(0)" onclick="addToCart('{{ $product->id }}')">
                                         <i class="fa fa-shopping-cart"></i> Add To Cart
                                     </a>
                                 @else
@@ -241,7 +245,7 @@
                                     </a>
                                 @endif
                             @else
-                                <a class="btn btn-dark" href="javascript:void(0)" onclick="addToCart({{ $product->id }})">
+                                <a class="btn btn-dark" href="javascript:void(0)" onclick="addToCart('{{ $product->id }}')">
                                     <i class="fa fa-shopping-cart"></i> Add To Cart
                                 </a>
                             @endif

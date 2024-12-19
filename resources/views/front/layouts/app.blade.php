@@ -62,7 +62,7 @@
                 @if(Auth::check())
                     <a href="{{ route('account.profile') }}" class="nav-link text-dark">My Account</a>
                 @else
-                    <a href="{{ route('account.login') }}" class="nav-link text-dark">Login/Register</a>
+                    <a href="{{ route('account.login') }}" class="nav-link text-dark">Login</a>
                 @endif
 
                 <form action="{{ route('front.shop') }}">
@@ -185,7 +185,7 @@
 			<div class="row">
 				<div class="col-12 mt-3">
 					<div class="copy-right text-center">
-						<p>© Copyright 2023 Online EasyBazaar. All Rights Reserved</p>
+						<p>© Copyright 2025 Online EasyBazaar. All Rights Reserved</p>
 					</div>
 				</div>
 			</div>

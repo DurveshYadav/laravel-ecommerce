@@ -321,6 +321,7 @@ class AuthController extends Controller
         return view('front.account.forgot-password');
     }
 
+    
     public function processForgotPassword(Request $request){
 
         $validator = Validator::make($request->all(),[

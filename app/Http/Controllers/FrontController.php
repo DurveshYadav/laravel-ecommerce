@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Validator;
 
 class FrontController extends Controller
 {
+
+    
     public function index(Request $request)
     {
         $products = Product::where('is_featured','Yes')
@@ -142,3 +144,4 @@ class FrontController extends Controller
 
     }
 }
+
